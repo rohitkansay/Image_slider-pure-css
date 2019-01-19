@@ -1,0 +1,65 @@
+.slider
+{
+	width:720px;
+	height: 360px;
+	background-image: url(1.jpg);
+	margin: 100px auto;
+	animation: rohit 10s infinite;
+}
+@keyframes rohit
+{
+	0%
+	{
+        background: url("1.jpg");
+	}
+	40% 50%
+	{
+        background: url("2.jpg");
+	}
+	60% 70%
+	{
+        background: url("3.jpg");
+	}
+	100%
+	{
+       background: url("2.jpg");
+	}
+}
+.container
+{
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+}
+.container img{
+	transition:transform 1s ease-in-out;
+}
+.container img:hover
+{
+	transform:translate3d(0px,-150px,0px);
+}
+
+
+.light
+{
+	position: absolute;
+	color: #000000;
+	font-size: 7em;
+	text-shadow: 0 0 50px #ff005b;
+}
+
+.text
+{
+	background-color: black;
+	width: 100%;
+	height: 250px;
+
+}
+.light:after
+{
+	content:attr(data-text);
+	top: 0;
+	left: 0;
+	padding: 0;
+
+}

@@ -1,0 +1,63 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slider</title>
+	<link rel="stylesheet" type="text/css" href="style99.css">
+</head>
+<body>
+	<div class=container>
+  <a href="#" class="arrowL">&lt;</a>
+  <div id="slideshow">
+    <div><img src="1.jpg"/></div>
+    <div class="hidden"><img src="2.jpg"/></div>
+    <div class="hidden"><img src="3.jpg"/></div>
+  </div>
+  <a href="#" class="arrowR">&gt;</a>
+</div>
+<script>
+	var main = function() {
+
+	var paused = false
+
+	$('.arrowR').click(function() {
+		paused = true;
+		$('#slideshow > div:first')
+		.fadeOut(1000)
+		.next()
+		.fadeIn(1000)
+		.end()
+		.appendTo('#slideshow');
+	});
+		
+	$('.arrowL').click(function() {
+		paused = true;
+		$('#slideshow > div:last')
+		.fadeIn(1000)
+		.prependTo('#slideshow')
+		.next()
+		.fadeOut(1000)
+		.end();
+	});
+
+
+	
+	setInterval(function() {
+		if (paused === false) { 
+			$('#slideshow > div:first')
+			.fadeOut(1000)
+			.next()
+			.fadeIn(1000)
+			.end()
+			.appendTo('#slideshow');
+		};
+	},  5000);
+   
+	
+};
+
+$(document).ready(main);
+</script>
+</body>
+</html>

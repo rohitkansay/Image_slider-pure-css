@@ -1,0 +1,46 @@
+body {
+	font-family: arial;
+
+}
+*{
+	margin:0;
+	padding: 0;
+	user-select: none;
+
+}
+.container nav.desk
+{
+	width: 100%;
+	background: #364a4b;
+	height: 60px;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14);
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+nav.desk{
+	list-style: none;
+	width: 75px;
+	height: 60px;
+	margin: 0 auto;
+
+}
+ nav.desk ul li
+ {
+ 	width: 20%;
+    list-style: none;
+ 	float: left;
+ 	text-transform: uppercase;
+ 	line-height: 60px;
+ 	text-align: center;
+ 	cursor: pointer;
+ 	transition: all 0.5s ease;
+ }
+ nav.desk ul li:hover{
+ 	background: #a3ada5;
+
+ }
+  nav.desk ul li.active{
+ 	background: #a3ada5;
+ 	
+ } 
